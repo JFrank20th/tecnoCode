@@ -6,7 +6,7 @@ const registerProducto = async (req, res) => {
 
   const existingProducto = await producto.findOne({ name: req.body.name });
   if (existingProducto)
-    return res.status(400).send("The role already existing");
+    return res.status(400).send("Error: The product already existing");
 
   const productoSchema = new producto({
     name: req.body.name,

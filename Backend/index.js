@@ -8,6 +8,7 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
+//reglas de coneccion entre front y back
 app.use(cors());
 app.use("/api/producto", producto); //asi se va a usar despues de crear el role
 
